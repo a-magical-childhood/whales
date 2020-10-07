@@ -1,5 +1,5 @@
-import React, {useCallback, useContext, useEffect } from 'react';
-import Context from './context.js';
+import React, { useContext, useEffect } from 'react';
+import { Context } from './context.js';
 import {Marker} from 'react-native-maps'
 import Tail from '../tail.png'
 
@@ -9,7 +9,7 @@ const WhaleList = () => {
 
   const WhaleContext = useContext(Context);
 
-  // console.log('WhaleContext', WhaleContext);
+  console.log('WhaleContext', WhaleContext);
 
 
   useEffect(() => {
