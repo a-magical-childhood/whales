@@ -1,4 +1,4 @@
-console.log('inside types.js')
+
 
 export const GET_WHALES = "GET_WHALES";
 

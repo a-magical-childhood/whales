@@ -1,6 +1,6 @@
 import React, {  useEffect, useState} from 'react';
 import MapView, {Marker} from 'react-native-maps';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Dimensions} from 'react-native';
 import Whales from './src/whaleList.js'
 import WrapYoState from './src/whaleState.js'
 
@@ -26,13 +26,18 @@ export default function DoMap(){
       { enableHighAccuracy: true, timeout: 2000, maximumAge: 2000 }
     );
   })
+       {/* <Marker coordinate={currentLocation} /> */}
 
   const styles = StyleSheet.create({
     container: {
-      ...StyleSheet.absoluteFillObject,
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
-    map: {
-      ...StyleSheet.absoluteFillObject,
+    mapStyle: {
+      width: Dimensions.get('window').width,
+      height: Dimensions.get('window').height,
     },
   });
 
@@ -41,7 +46,7 @@ export default function DoMap(){
     <WrapYoState>
       <View style={styles.container}>
         <MapView
-          style={styles.map}
+          style={styles.mapStyle}
           region={{
             latitude: currentLocation.latitude,
             longitude: currentLocation.longitude,
@@ -49,7 +54,6 @@ export default function DoMap(){
             longitudeDelta: 0.012,
           }}
         >
-          <Marker coordinate={currentLocation} />
           <Whales /> 
         </MapView>
       </View>
