@@ -1,5 +1,6 @@
 import React, {useCallback} from 'react';
-import { Button, Linking, Alert, View, StyleSheet} from 'react-native'
+import { Button, Linking, Alert, View, StyleSheet, Text} from 'react-native'
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 
 
@@ -20,18 +21,45 @@ const OpenURLButton = ({ url, children }) => {
     }
   }) 
   
-  return <Button className="footerButton" title={children} onPress={handlePress} />;
+  return <Button className="footerButton" title={children} onPress={handlePress} />
+
 };
+
+const styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      flexDirection: 'row',
+      alignItems: 'center',
+      height: 10,
+      justifyContent: 'space-evenly',
+  },
+  buttonContainer: {
+      backgroundColor: 'rgba(34, 34, 34, 0.8)',
+      zIndex: 2,
+      color: 'rgb(211,211,211)',
+      width: 150
+  },
+  button: {
+    color: 'rgb(211,211,211)',
+  }
+});
 
   export default function Footer () {
  
   return (
-    < View className='footer' style={StyleSheet.container}>
-      <OpenURLButton url={reportURL}>Report A Sighting</OpenURLButton>
-      <OpenURLButton url={donateURL}>Donate to Whale Museum</OpenURLButton>
+    < View className='footer' style={styles.container}>
+      <View style={styles.buttonContainer}>
+        <OpenURLButton url={reportURL} style={styles.button, {color: 'rgb(211,211,211)'}}>
+        Report A Sighting
+        </OpenURLButton>
+      </View>
+      <View style={styles.buttonContainer}>
+        <OpenURLButton url={donateURL}>
+        Donate to Whale Museum
+        </OpenURLButton>
+      </View>
+      
     </ View>
   )
-
-  
 
 }

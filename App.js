@@ -4,11 +4,10 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import DeMap from './map.js'
 import Footer from './src/components/footer.js'
-import './src/styles/footer.sass'
 
-const reportURL = 'http://hotline.whalemuseum.org/sightings/new';
+// const reportURL = 'http://hotline.whalemuseum.org/sightings/new';
 
-const donateURL = 'https://whalemuseum.org/products/make-a-donation';
+// const donateURL = 'https://whalemuseum.org/products/make-a-donation';
 
 
 export default function App() {
