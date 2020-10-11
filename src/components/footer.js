@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
 import { Button, Linking, Alert, View, StyleSheet, Text} from 'react-native'
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+
 
 
 
