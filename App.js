@@ -3,6 +3,12 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import DeMap from './map.js'
+import Footer from './src/components/footer.js'
+import './src/styles/footer.sass'
+
+const reportURL = 'http://hotline.whalemuseum.org/sightings/new';
+
+const donateURL = 'https://whalemuseum.org/products/make-a-donation';
 
 
 export default function App() {
@@ -12,6 +18,7 @@ export default function App() {
         <Text>HELLO MERMAIDS!</Text>
         <DeMap />
         <StatusBar style="auto" />
+        <Footer />
       </View>
   );
 }
