@@ -6,6 +6,7 @@ import Whales from './src/whaleList.js'
 import WrapYoState from './src/whaleState.js'
 
 
+
 export default function DoMap(){
   const [currentLocation, setCurrentLocation] = useState({
     latitude: 0,

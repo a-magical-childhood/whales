@@ -4,6 +4,7 @@ import { Marker } from 'react-native-maps'
 
 import Context from './context.js';
 import Tail from '../tail.png'
+import ModalText from '../src/components/modalText.js';
 
 const WhaleList = () => {
   const WhaleContext = useContext(Context);
@@ -17,7 +18,7 @@ const WhaleList = () => {
     setVisible(!visible);
   }
 
-  // console.log('Making ths fucker work', WhaleContext.whales[5].latitude )
+  
   return (
     <>
       {(WhaleContext.whales && WhaleContext.whales.length) ? WhaleContext.whales.map((whale, idx)=> (       
@@ -28,8 +29,8 @@ const WhaleList = () => {
             onPress={toggleOverlay}
           >
             <Overlay key={whale.latitude} isVisible={visible} onPress={toggleOverlay}>
-            <Text>Hello from Overlay!</Text>
-          </Overlay>
+               <ModalText whale={whale}/>
+            </Overlay>
           </Marker>
 
         ))

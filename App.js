@@ -19,6 +19,7 @@ export default function App() {
       <Header />
       <DeMap />
       <StatusBar style="auto" />
+      <Footer />
     </View>
   );
 }
