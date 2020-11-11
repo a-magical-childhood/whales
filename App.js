@@ -6,9 +6,8 @@ import Header from './src/header.js';
 import DeMap from './map.js'
 import Footer from './src/components/footer.js'
 
-// const reportURL = 'http://hotline.whalemuseum.org/sightings/new';
 
-// const donateURL = 'https://whalemuseum.org/products/make-a-donation';
+
 
 
 export default function App() {
