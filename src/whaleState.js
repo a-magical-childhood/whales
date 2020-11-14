@@ -14,7 +14,7 @@ export default function WhaleState (props){
   const[state, dispatch] = useReducer(WhaleReducer, initState);
 
   const getDeWhales = async () => {
-   console.log('INSIDE getDeWhales, Before Try');
+  
    try {
 
      let res = await axios.get('http://hotline.whalemuseum.org/api.json');
