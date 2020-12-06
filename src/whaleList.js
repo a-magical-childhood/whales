@@ -45,19 +45,31 @@ const WhaleList = () => {
         <Image source={StickFigure} 
         style={{width: 45, height: 75}}></Image>
       </Marker>
+      
       {(WhaleContext.whales && WhaleContext.whales.length) ? WhaleContext.whales.map((whale, idx)=> (       
           <Marker
             key={whale.id}
             coordinate={{latitude: whale.latitude, longitude: whale.longitude}}
-          
+            onPress={toggleOverlay}
           >
-            <Image source={Tail}   
-              onPress={toggleOverlay}
+
+            <Image 
+              source={Tail}   
               style={{width: 25, height: 45}}>
             </Image>
-            <Overlay key={whale.latitude} isVisible={visible} onPress={toggleOverlay} style={{padding: 10, textAlign: 'center' }}>
-               <ModalText whale={whale}/>
+
+            <Overlay 
+              key={whale.latitude} 
+              isVisible={visible} 
+              onBackdropPress={toggleOverlay} 
+              style={{
+                padding: 10, 
+                textAlign: 'center' 
+                }}
+              >
+                <ModalText whale={whale}/>
             </Overlay>
+
           </Marker>
 
         ))
