@@ -9,7 +9,7 @@ export default function ModalGoods (props) {
     <Text>
       WHALES AND WHALES AND MORE WHALES
     </Text>
-    <Text>
+    <Text style={{margin: 2}}>
       Species: {quantity || 'some'}{species}
     </Text>
     <Text>
