@@ -6,8 +6,8 @@ import WhaleLogo from './logoIcon.js';
 const header = () => {
     return (
         <Header
-            leftComponent={{ icon: 'menu', color: '#fff' }}
-            centerComponent={{ text: 'WhaleFinder', style: { color: '#fff' } }}
+            // leftComponent={{ icon: 'menu', color: '#fff' }}
+            centerComponent={{ text: 'WhaleFinder', style: { color: '#fff', fontWeight: 'bold' } }}
             rightComponent={<WhaleLogo />}
             containerStyle={{
                 backgroundColor: 'rgba(34, 34, 34, 0.8)',

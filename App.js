@@ -4,15 +4,21 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import Header from './src/header.js';
 import DeMap from './map.js'
+import Footer from './src/components/footer.js'
+
+
+
 
 
 export default function App() {
  
   return (
+
     <View style={styles.container}>
       <Header />
       <DeMap />
       <StatusBar style="auto" />
+      <Footer />
     </View>
   );
 }

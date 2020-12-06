@@ -1,8 +1,10 @@
 import React, {  useEffect, useState} from 'react';
 import MapView, {Marker} from 'react-native-maps';
 import {View, StyleSheet, Dimensions} from 'react-native';
+
 import Whales from './src/whaleList.js'
 import WrapYoState from './src/whaleState.js'
+
 
 
 export default function DoMap(){
